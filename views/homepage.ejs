@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Sign Up</title>
+    <link rel="stylesheet" href="homepage.css" />
+</head>
+
+<body>
+    <div class="container">
+        <form method="POST" action="/register">
+            <p>
+                Register With Us! Join the other <strong><%= count %> </strong>users!
+            </p>
+            <div class="form-control email">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Enter Email Address" />
+            </div>
+            <div class="form-control">
+                <label for="first">First Name</label>
+                <input type="text" id="first" name="first" placeholder="Enter First Name" />
+            </div>
+            <div class="form-control">
+                <label for="last">Last Name</label>
+                <input type="text" id="last" name="last" placeholder="Enter Last Name" />
+            </div>
+            <button>Submit</button>
+            <p>Last user created <strong><%= lastCreated %> </strong></p>
+        </form>
+    </div>
+</body>
+
+</html>

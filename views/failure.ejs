@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Sign Up</title>
+    <link rel="stylesheet" href="homepage.css" />
+</head>
+
+<body>
+    <div class="container">
+        <form method="POST" action="/register">
+            <p>
+                Register With Us! Join the other <strong><%= count %> </strong>users!
+            </p>
+            <div class="<%= validEmail == true ? 'form-control email' : 'form-control email email-failure' %>">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Enter Email Address" />
+                <small><%= validEmail == true ? '':'Please enter a valid mail address' %></small>
+            </div>
+            <div class="<%= validFname == true ? 'form-control' : 'form-control fname-failure' %>">
+                <label for="first">First Name</label>
+                <input type="text" id="first" name="first" placeholder="Enter First Name" />
+                <small><%= validFname == true ? '':'Please fill in your first name' %></small>
+            </div>
+            <div class="<%= validLname == true ? 'form-control' : 'form-control lname-failure' %>">
+                <label for="last">Last Name</label>
+                <input type="text" id="last" name="last" placeholder="Enter Last Name" />
+                <small><%= validLname == true ? '':'Please fill in your last name' %></small>
+            </div>
+            <button>Submit</button>
+            <p>Last user created <strong><%= lastCreated %> </strong></p>
+        </form>
+    </div>
+</body>
+
+</html>
