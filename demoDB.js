@@ -17,10 +17,10 @@ app.use(express.static(__dirname + "/public/"));
 
 // connect to hosted SQL Database
 var con = mysql.createPool({
-  host: "us-cdbr-east-05.cleardb.net",
-  user: "bdad3163568218",
-  password: "d04afd66",
-  database: "heroku_296912ef47a8a10",
+  host: //hidden,
+  user: //hidden,
+  password: //hidden,
+  database: //hideen,
 });
 
 // homepage
